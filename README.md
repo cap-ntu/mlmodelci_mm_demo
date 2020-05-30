@@ -11,4 +11,11 @@ npm start
 
 BERT Application on Descriptive Text Sentiment Analysis
 
-![Screenshot 2020-05-30 20.19.40.png](https://i.loli.net/2020/05/30/hpRXVFzkvwPytSE.png)
+
+![](./screenshots/bert.png)
+
+<br/>
+
+Mask R-CNN Application on Image Object Detection
+
+![](./screenshots/mrcnn.png)
