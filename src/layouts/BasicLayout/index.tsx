@@ -5,8 +5,8 @@ import PageNav from './components/PageNav';
 import Logo from './components/Logo';
 import Footer from './components/Footer';
 
-(function() {
-  const throttle = function(type: string, name: string, obj: Window = window) {
+(function () {
+  const throttle = function (type: string, name: string, obj: Window = window) {
     let running = false;
 
     const func = () => {
@@ -48,7 +48,7 @@ export default function BasicLayout({
   };
 
   const [device, setDevice] = useState(getDevice(NaN));
-  window.addEventListener('optimizedResize', e => {
+  window.addEventListener('optimizedResize', (e) => {
     setDevice(getDevice(e && e.target && e.target.innerWidth));
   });
   return (
@@ -62,7 +62,7 @@ export default function BasicLayout({
         <Shell.Branding>
           <Logo
             image="https://i.loli.net/2020/05/08/VuJI6wTh5GftmDi.png"
-            text="Machine Learning ModelCI Web Portal"
+            text="Machine Learning ModelCI Application Demo"
           />
         </Shell.Branding>
         <Shell.Navigation
@@ -70,8 +70,8 @@ export default function BasicLayout({
           style={{
             marginRight: 10,
           }}
-        ></Shell.Navigation>
-        <Shell.Action></Shell.Action>
+        />
+        <Shell.Action />
         <Shell.Navigation>
           <PageNav />
         </Shell.Navigation>

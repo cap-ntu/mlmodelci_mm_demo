@@ -140,7 +140,7 @@ export default class BERT extends React.Component {
         <Divider orientation="left">Test Panel</Divider>
         <p className="text-small">
           Please type any texts in the area below, and click the
-          <strong> Click to Judge</strong> button to analyse the sentiments.
+          <strong> Click to Analyse</strong> button to analyse the sentiments.
           <Button
             loading={this.state.isJudging}
             type="primary"
@@ -152,7 +152,7 @@ export default class BERT extends React.Component {
               });
             }}
           >
-            Click to Judge!
+            Click to Analyse!
           </Button>
         </p>
         <TextArea
