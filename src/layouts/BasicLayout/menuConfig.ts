@@ -7,19 +7,19 @@ const asideMenuConfig = [
     icon: 'chart-pie',
   },
   {
-    name: 'Users',
-    path: '/user',
-    icon: 'account',
+    name: 'BERT Model',
+    path: '/BERT',
+    icon: 'favorites-filling',
+  },
+  {
+    name: 'Mask R-CNN Model',
+    path: '/MRCNN',
+    icon: 'favorites-filling',
   },
   {
     name: 'Settings',
     path: '/setting',
     icon: 'set',
-  },
-  {
-    name: 'About',
-    path: '/about',
-    icon: 'warning',
   },
 ];
 

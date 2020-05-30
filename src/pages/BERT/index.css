@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+.demo2 {
+  text-align: center;
+}
+
+canvas {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin: 2em;
+}

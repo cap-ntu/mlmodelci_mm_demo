@@ -1,8 +1,8 @@
 import BasicLayout from '@/layouts/BasicLayout';
 import Dashboard from '@/pages/Dashboard';
-import About from '@/pages/About';
+import MRCNN from '@/pages/MRCNN';
 import Setting from '@/pages/Setting';
-import User from '@/pages/User';
+import BERT from '@/pages/BERT';
 
 const routerConfig = [
   {
@@ -15,18 +15,18 @@ const routerConfig = [
         component: Dashboard,
       },
       {
-        path: '/about',
-        component: About,
+        path: '/mrcnn',
+        component: MRCNN,
       },
       {
-        path: '/user',
-        component: User,
+        path: '/bert',
+        component: BERT,
       },
       {
         path: '/setting',
         component: Setting,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 export default routerConfig;
