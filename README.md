@@ -24,7 +24,6 @@ You can build a script to start the server or using command line tool.
 
 Please refer to the [ModelCI doc](https://github.com/cap-ntu/ML-Model-CI#retrieve-model-and-deploy). 
 
-
 #### Using Script to Start
 
 By using the [serve.py]() in ModelCI, we can start the inference server easily, but you need to [register the model](https://github.com/cap-ntu/ML-Model-CI#register-a-saved-model) first.  
@@ -34,7 +33,7 @@ python serving.py name --m MRCNN -f tensorflow -e tfs --device cuda:1
 ```
 The same as BERT model. 
 
-### Connect the Web Application
+### Connect to the Web Application
 
 You need to modify the API address in the application source code， to start the services.
 
@@ -52,12 +51,12 @@ npm start
 
 ## Screenshots
 
+|BERT Application on Descriptive Text Sentiment Analysis|Mask R-CNN Application on Image Object Detection|
+|:--:|:--:|
+|![](./screenshots/bert.png)|![](./screenshots/mrcnn.png)|
+
+For more details about the [screenshots](./screenshots).
 
 
-![](./screenshots/bert.png)
 
-<br/>
 
-Mask R-CNN Application on Image Object Detection
-
-![](./screenshots/mrcnn.png)
