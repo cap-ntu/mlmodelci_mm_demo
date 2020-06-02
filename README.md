@@ -35,7 +35,7 @@ The same as BERT model.
 
 ### Connect to the Web Application
 
-You need to modify the API address in the application source code， to start the services.
+You need to modify the API address in the application source code, to start the services.
 
 Address location:
 
