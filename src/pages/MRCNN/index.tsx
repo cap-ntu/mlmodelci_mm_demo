@@ -117,79 +117,204 @@ export default class MRCNN extends React.Component {
             margin: '0 0 2rem 0',
             textAlign: 'left',
             width: '100%',
+            fontSize: 20,
           }}
           message=" Mask R-CNN Application on Image Object Detection "
         />
-        <Divider orientation="left">Model Information</Divider>
+        <Divider orientation="left" style={{ fontSize: 25 }}>
+          Model Information
+        </Divider>
         <div style={{ textAlign: 'left' }}>
           <Descriptions
             style={{ width: '92%', margin: '0 auto', marginTop: '20px' }}
             column={4}
-            size="small"
+            size="middle"
           >
-            <Descriptions.Item label="Profiling Device">
-              <Tag color="magenta">Nvidia RTX 2080Ti</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Profiling Device
+                </a>
+              }
+            >
+              <Tag
+                color="magenta"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                Nvidia RTX 2080Ti
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Profiling Batch Size">
-              <Tag color="purple">1</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Profiling Batch Size
+                </a>
+              }
+            >
+              <Tag
+                color="purple"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                1
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Profiling Number of Batches">
-              <Tag color="blue">6400</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Profiling Number of Batches
+                </a>
+              }
+            >
+              <Tag
+                color="blue"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                6400
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Average GPU Utilization">
-              <Tag color="volcano"> 43.3939 %</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Average GPU Utilization
+                </a>
+              }
+            >
+              <Tag
+                color="volcano"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                43.3939 %
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Throughput">
-              <Tag color="gold">14.718 req/sec</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Throughput
+                </a>
+              }
+            >
+              <Tag
+                color="gold"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                14.718 req/sec
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="50th Percentile Latency">
-              <Tag color="green">66.6826 ms</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  50th Percentile Latency
+                </a>
+              }
+            >
+              <Tag
+                color="green"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                66.6826 ms
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="95th Percentile Latency">
-              <Tag color="cyan">68.38 ms </Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  95th Percentile Latency
+                </a>
+              }
+            >
+              <Tag
+                color="cyan"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                68.38 ms{' '}
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="99th Percentile Latency">
-              <Tag color="geekblue">70.1145 ms</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  99th Percentile Latency
+                </a>
+              }
+            >
+              <Tag
+                color="geekblue"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                70.1145 ms
+              </Tag>
             </Descriptions.Item>
           </Descriptions>
         </div>
-        <Divider orientation="left">Test Panel</Divider>
+        <Divider orientation="left" style={{ fontSize: 25 }}>
+          Test Panel
+        </Divider>
 
         <div style={{ display: 'flex', marginTop: '20px', marginLeft: '50px' }}>
           <Search
             style={{ width: '80%' }}
             placeholder="input testing image url"
             enterButton="Load Image and Test"
-            size="medium"
+            size="large"
             onSearch={(value) => console.log(value)}
           />
 
-          <Button style={{ marginLeft: '10px' }}>
-            Use Default Image and Test
+          <Button type="primary" size="large" style={{ marginLeft: '10px' }}>
+            Default Image to Test
           </Button>
         </div>
 
-        <Divider orientation="left">Tested Results</Divider>
-
-        <div style={{ display: 'flex', marginTop: '20px' }}>
-          <Alert
-            style={{ width: '40%', marginLeft: '90px' }}
-            message="Image Before"
-            type="info"
-          />
-
-          <Alert
-            style={{ width: '40%', marginLeft: '80px' }}
-            message="Image Processed"
-            type="success"
-          />
-        </div>
-
-        <div style={{ marginTop: '20px' }}>
-          <img src="" alt="right" height="38%" />
-
-          <img style={{ marginLeft: '80px' }} height="38%" src="" alt="right" />
-        </div>
+        <Divider orientation="left" style={{ fontSize: 25 }}>
+          Tested Results (before and after)
+        </Divider>
+        <img src="" alt="left" width="45%" />
+        <img style={{ marginLeft: '20px' }} width="45%" src="" alt="right" />
       </div>
     );
   }

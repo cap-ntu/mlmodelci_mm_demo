@@ -8,9 +8,12 @@ import './index.css';
 
 const { TextArea } = Input;
 
+// We are very happy to see the ML ModelCI and believe it can make great contributions to the MM community!
+
 export default class BERT extends React.Component {
   private judgeColumns = [
     {
+      className: 'column',
       title: 'positive',
       dataIndex: 'pos',
       key: 'pos',
@@ -18,13 +21,16 @@ export default class BERT extends React.Component {
         text = (text * 100).toFixed(5);
         const { pos, neg, neutral } = record;
         return pos > neg && pos > neutral ? (
-          <div style={{ color: 'red', fontWeight: 'bold' }}>{text}%</div>
+          <div style={{ color: 'red', fontWeight: 'bold', fontSize: 25 }}>
+            {text}%
+          </div>
         ) : (
-          <div>{text}%</div>
+          <div style={{ fontSize: 25 }}>{text}%</div>
         );
       },
     },
     {
+      className: 'column',
       title: 'negative',
       dataIndex: 'neg',
       key: 'neg',
@@ -32,13 +38,16 @@ export default class BERT extends React.Component {
         const { pos, neg, neutral } = record;
         text = (text * 100).toFixed(5);
         return neg > pos && neg > neutral ? (
-          <div style={{ color: 'red', fontWeight: 'bold' }}>{text}%</div>
+          <div style={{ color: 'red', fontWeight: 'bold', fontSize: 25 }}>
+            {text}%
+          </div>
         ) : (
-          <div>{text}%</div>
+          <div style={{ fontSize: 25 }}>{text}%</div>
         );
       },
     },
     {
+      className: 'column',
       title: 'neutral',
       dataIndex: 'neutral',
       key: 'neutral',
@@ -46,9 +55,11 @@ export default class BERT extends React.Component {
         const { pos, neg, neutral } = record;
         text = (text * 100).toFixed(5);
         return neutral > pos && neutral > neg ? (
-          <div style={{ color: 'red', fontWeight: 'bold' }}>{text}%</div>
+          <div style={{ color: 'red', fontWeight: 'bold', fontSize: 25 }}>
+            {text}%
+          </div>
         ) : (
-          <div>{text}%</div>
+          <div style={{ fontSize: 25 }}>{text}%</div>
         );
       },
     },
@@ -69,7 +80,7 @@ export default class BERT extends React.Component {
    */
   private loadTextToJudge = (text) => {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = '';
+    const targetUrl = 'http://text-processing.com/api/sentiment/';
 
     this.setState({ isJudging: true });
 
@@ -101,49 +112,191 @@ export default class BERT extends React.Component {
             margin: '0 0 2rem 0',
             textAlign: 'left',
             width: '100%',
+            fontSize: 20,
           }}
           message="BERT Application on Descriptive Text Sentiment Analysis"
         />
-        <Divider orientation="left">Model Information</Divider>
+        <Divider orientation="left" style={{ fontSize: 25 }}>
+          Model Information
+        </Divider>
         <div style={{ textAlign: 'left' }}>
           <Descriptions
             style={{ width: '92%', margin: '0 auto', marginTop: '20px' }}
             column={4}
-            size="small"
+            size="middle"
           >
-            <Descriptions.Item label="Profiling Device">
-              <Tag color="magenta">Nvidia RTX 2080Ti</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Profiling Device
+                </a>
+              }
+            >
+              <Tag
+                color="magenta"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                Nvidia RTX 2080Ti
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Profiling Batch Size">
-              <Tag color="purple">1</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Profiling Batch Size
+                </a>
+              }
+            >
+              <Tag
+                color="purple"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                1
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Profiling Number of Batches">
-              <Tag color="blue">6400</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Profiling Number of Batches
+                </a>
+              }
+            >
+              <Tag
+                color="blue"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                6400
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Average GPU Utilization">
-              <Tag color="volcano"> 27.1429 %</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Average GPU Utilization
+                </a>
+              }
+            >
+              <Tag
+                color="volcano"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                27.1429 %
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="Throughput">
-              <Tag color="gold">91.04303 req/sec</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  Throughput
+                </a>
+              }
+            >
+              <Tag
+                color="gold"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                91.04303 req/sec
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="50th Percentile Latency">
-              <Tag color="green">11.08014 ms</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  50th Percentile Latency
+                </a>
+              }
+            >
+              <Tag
+                color="green"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                11.08014 ms
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="95th Percentile Latency">
-              <Tag color="cyan">11.45675 ms </Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  95th Percentile Latency
+                </a>
+              }
+            >
+              <Tag
+                color="cyan"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                11.45675 ms
+              </Tag>
             </Descriptions.Item>
-            <Descriptions.Item label="99th Percentile Latency">
-              <Tag color="geekblue">11.98774 ms</Tag>
+            <Descriptions.Item
+              label={
+                <a
+                  style={{
+                    whiteSpace: 'nowrap',
+                    fontSize: 20,
+                    color: 'black',
+                  }}
+                >
+                  99th Percentile Latency
+                </a>
+              }
+            >
+              <Tag
+                color="geekblue"
+                style={{ height: '30px', textAlign: 'center', fontSize: 20 }}
+              >
+                11.98774 ms
+              </Tag>
             </Descriptions.Item>
           </Descriptions>
         </div>
-        <Divider orientation="left">Test Panel</Divider>
-        <p className="text-small">
+        <Divider orientation="left" style={{ fontSize: 25 }}>
+          Test Panel
+        </Divider>
+        <p className="text-small" style={{ fontSize: 20 }}>
           Please type any texts in the area below, and click the
-          <strong> Click to Analyse</strong> button to analyse the sentiments.
+          <strong> Click to Test</strong> button to analyse the sentiments.
           <Button
             loading={this.state.isJudging}
             type="primary"
+            size="large"
             style={{ marginLeft: '20px' }}
             onClick={() => {
               this.loadTextToJudge(this.state.textForJudge);
@@ -152,11 +305,12 @@ export default class BERT extends React.Component {
               });
             }}
           >
-            Click to Analyse!
+            Click to Test!
           </Button>
         </p>
         <TextArea
           style={{
+            fontSize: 28,
             width: '80%',
             marginTop: '1rem',
             height: '150px',
@@ -167,10 +321,13 @@ export default class BERT extends React.Component {
           onChange={(e) => this.setState({ textForJudge: e.target.value })}
         />
         <br />
-        <Divider orientation="left">Tested Results</Divider>
+        <Divider orientation="left" style={{ fontSize: 25 }}>
+          Tested Results
+        </Divider>
         {this.state.sentimentData ? (
           <div>
             <Table
+              size="middle"
               style={{
                 marginTop: '1rem',
                 marginLeft: '10%',
@@ -190,7 +347,7 @@ export default class BERT extends React.Component {
                 justifyContent: 'center',
               }}
             >
-              <div style={{ margin: '10px 20px 0 0' }}>
+              <div style={{ margin: '10px 20px 0 0', fontSize: 25 }}>
                 The test result is: {this.state.sentimentData.label}
               </div>
               {this.state.sentimentData.label === 'neg' && (

@@ -10,3 +10,7 @@ canvas {
   border-radius: 3px;
   margin: 2em;
 }
+
+.column {
+  font-size: 25px;
+}
