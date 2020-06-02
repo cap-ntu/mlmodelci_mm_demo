@@ -311,10 +311,44 @@ export default class MRCNN extends React.Component {
         </div>
 
         <Divider orientation="left" style={{ fontSize: 25 }}>
-          Tested Results (before and after)
+          Tested Results
         </Divider>
-        <img src="" alt="left" width="45%" />
-        <img style={{ marginLeft: '20px' }} width="45%" src="" alt="right" />
+
+        {/* <div style={{ display: 'flex', marginTop: '20px' }}>
+          <Alert
+            style={{ width: '40%', marginLeft: '90px' }}
+            message="Image Before"
+            type="info"
+          />
+
+          <Alert
+            style={{ width: '40%', marginLeft: '80px' }}
+            message="Image Processed"
+            type="success"
+          />
+        </div>
+
+        <div style={{ marginTop: '20px' }}>
+          <img
+            src="./src/pages/MRCNN/sample/testin.jpg"
+            alt="left"
+            width="35%"
+          />
+
+          <img
+            style={{ marginLeft: '180px' }}
+            width="35%"
+            src="./src/pages/MRCNN/sample/testout.png"
+            alt="right"
+          />
+        </div> */}
+        {/* <img src="./src/pages/MRCNN/sample/testin.jpg" alt="left" width="45%" /> */}
+        <img
+          style={{ marginLeft: '20px' }}
+          width="650px"
+          src="./src/pages/MRCNN/sample/testout.png"
+          alt="right"
+        />
       </div>
     );
   }
