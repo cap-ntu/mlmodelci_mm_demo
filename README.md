@@ -39,7 +39,7 @@ You need to modify the API address in the application source code, to start the 
 
 Address location:
 
-- [BERT](https://github.com/tensorflow/models/tree/master/official/nlp/bert)
+- [BERT](https://github.com/cap-ntu/mlmodelci_mm_demo/blob/b1509b56f55e8c6ce3fb262e237a82655ed3e1e4/src/pages/BERT/index.tsx#L72)
 - [Mask R-CNN](https://github.com/cap-ntu/mlmodelci_mm_demo/blob/master/src/pages/MRCNN/index.tsx)
 
 After all of these, you can start the web application to see the serving and inference results by:
