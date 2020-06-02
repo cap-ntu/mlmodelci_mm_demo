@@ -26,7 +26,7 @@ Please refer to the [ModelCI doc](https://github.com/cap-ntu/ML-Model-CI#retriev
 
 #### Using Script to Start
 
-By using the [serve.py]() in ModelCI, we can start the inference server easily, but you need to [register the model](https://github.com/cap-ntu/ML-Model-CI#register-a-saved-model) first.  
+By using the [serve.py](https://github.com/cap-ntu/ML-Model-CI/blob/master/modelci/hub/deployer/serving.py) in ModelCI, we can start the inference server easily, but you need to [register the model](https://github.com/cap-ntu/ML-Model-CI#register-a-saved-model) first.  
 
 ```bash
 python serving.py name --m MRCNN -f tensorflow -e tfs --device cuda:1
