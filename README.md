@@ -13,7 +13,7 @@ The web application contains two parts (tabs):
 
 Click the following links to download the models.
 
-- [BERT](https://github.com/tensorflow/models/tree/master/official/nlp/bert).
+- [BERT](https://github.com/tensorflow/models/tree/master/official/nlp/bert), [IMDB Dataset](https://keras.io/api/datasets/imdb/)
 - [Mask R-CNN](http://download.tensorflow.org/models/object_detection/mask_rcnn_resnet101_atrous_coco_2018_01_28.tar.gz).
 
 ### Serve Model by ModelCI
@@ -40,7 +40,7 @@ You need to modify the API address in the application source code， to start th
 
 Address location:
 
-- [BERT](https://github.com/tensorflow/models/tree/master/official/nlp/bert), [IMDB Dataset](https://keras.io/api/datasets/imdb/)
+- [BERT](https://github.com/tensorflow/models/tree/master/official/nlp/bert)
 - [Mask R-CNN](https://github.com/cap-ntu/mlmodelci_mm_demo/blob/master/src/pages/MRCNN/index.tsx)
 
 After all of these, you can start the web application to see the serving and inference results by:
