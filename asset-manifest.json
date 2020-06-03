@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/modelci-gh-page/static/css/main.11b1b002.chunk.css",
+    "main.js": "/modelci-gh-page/static/js/main.e945d4e4.chunk.js",
+    "main.js.map": "/modelci-gh-page/static/js/main.e945d4e4.chunk.js.map",
+    "runtime-main.js": "/modelci-gh-page/static/js/runtime-main.bdfee90f.js",
+    "runtime-main.js.map": "/modelci-gh-page/static/js/runtime-main.bdfee90f.js.map",
+    "static/css/2.4c6ee7a4.chunk.css": "/modelci-gh-page/static/css/2.4c6ee7a4.chunk.css",
+    "static/js/2.de18c51f.chunk.js": "/modelci-gh-page/static/js/2.de18c51f.chunk.js",
+    "static/js/2.de18c51f.chunk.js.map": "/modelci-gh-page/static/js/2.de18c51f.chunk.js.map",
+    "index.html": "/modelci-gh-page/index.html",
+    "precache-manifest.4ca1bb7b89334b9be82c5cef6c1a6f89.js": "/modelci-gh-page/precache-manifest.4ca1bb7b89334b9be82c5cef6c1a6f89.js",
+    "service-worker.js": "/modelci-gh-page/service-worker.js",
+    "static/css/2.4c6ee7a4.chunk.css.map": "/modelci-gh-page/static/css/2.4c6ee7a4.chunk.css.map",
+    "static/css/main.11b1b002.chunk.css.map": "/modelci-gh-page/static/css/main.11b1b002.chunk.css.map",
+    "static/js/2.de18c51f.chunk.js.LICENSE.txt": "/modelci-gh-page/static/js/2.de18c51f.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/modelci-gh-page/static/media/logo.73d27ac1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdfee90f.js",
+    "static/css/2.4c6ee7a4.chunk.css",
+    "static/js/2.de18c51f.chunk.js",
+    "static/css/main.11b1b002.chunk.css",
+    "static/js/main.e945d4e4.chunk.js"
+  ]
+}
