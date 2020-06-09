@@ -1,5 +1,7 @@
 # Application Demo of ML Model CI
 
+Please go to [demo website](https://cap-ntu.github.io/mlmodelci_mm_demo/) for more details.
+
 Sample applications that can be served and profiled by [ML Model CI](https://github.com/cap-ntu/ML-Model-CI).
 
 The web application contains two parts (tabs):
